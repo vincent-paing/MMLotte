@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="consent_crash_log_title">Would you like to allow us to collect crash logs?</string>
+  <string name="consent_crash_log_description">We would like to collect info, explicitly, Device Model, Device ID and why the crash happened. We use these information to further improve the app. For further infos, you can read privacy policy below</string>
+  <string name="consent_crash_log_notice">You can always change this in settings</string>
+  <string name="txt_crash_log_give_consent">Yes, I give consent</string>
+  <string name="txt_crash_log_no_consent">No, don\'t collect data</string>
+
+
+  <string name="consent_ad_title">Would you like to see personalized ads?</string>
+  <string name="consent_ad_description">We would like to collect info, explicitly, Device Model, Device ID to show you ads catered to you. For further infos, you can read privacy policy below</string>
+  <string name="consent_ad_notice">You can always change this in settings</string>
+  <string name="txt_ad_personalized">Yes, show me personalized ads</string>
+  <string name="txt_ad_non_personalized">No, keep me anonymous</string>
+
+
+  <string name="text_privcay_policy">Privacy Policy</string>
+</resources>

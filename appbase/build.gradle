@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion BuildConfig.compileSdk
+
+
+  defaultConfig {
+    minSdkVersion BuildConfig.minSdk
+    targetSdkVersion BuildConfig.targetSdk
+    resConfigs "en", "zg"
+    multiDexEnabled true
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  api project(':domain')
+  api project(':data')
+  api project(':network')
+  api project(':cache')
+
+  api ThreeTenBp.android
+  api CommonLibs.phrase
+
+  //AndroidX
+  api AndroidXCore.core
+  api AndroidXCore.core_kt
+  api AndroidXAppCompat.app_compat
+  api AndroidXRecyclerView.recycler_view
+
+
+  //Inject
+  api CommonLibs.javaxInject
+  api Dagger.core
+  api Dagger.android_core
+  api Dagger.android_support
+  kapt Dagger.compiler
+  kapt Dagger.android_processor
+
+  //RX
+  api ReactiveX.rxandroid
+
+  //Arch
+  api AndroidArchLifeCycle.lifecycle
+  kapt AndroidArchLifeCycle.lifecycle_compiler
+
+  api CommonLibs.timber
+
+  kapt 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
+  annotationProcessor 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
+
+  //Test
+  testImplementation CommonLibs.junit
+
+  kaptAndroidTest Dagger.compiler
+  androidTestImplementation Mockito.core
+  androidTestImplementation Mockito.inline
+  androidTestImplementation Mockito.kotlin
+  androidTestApi AndroidXTest.rules
+  androidTestApi AndroidXTest.runner
+  androidTestApi AndroidArchCore.test
+  androidTestImplementation AndroidXEspresso.core
+  androidTestImplementation AndroidXEspresso.contrib
+  androidTestImplementation AndroidXEspresso.intents
+  androidTestImplementation AndroidXEspresso.idling_concurrent
+  androidTestImplementation AndroidXEspresso.idling_resource
+  androidTestImplementation FragmentTestRule.android
+  androidTestImplementation AndroidXEspresso.rx_idler
+}

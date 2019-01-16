@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+  repositories {
+    google()
+    mavenCentral()
+    maven {
+      url 'https://maven.fabric.io/public'
+    }
+    jcenter()
+  }
+  dependencies {
+    classpath CommonLibs.android_gradle_plugin
+    classpath Kotlin.gradle_plugin
+    classpath "com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta02"
+    classpath GoogleService.gms
+    classpath Firebase.fabric_plugin
+
+    // NOTE: Do not place your application dependencies here; they belong
+    // in the individual module build.gradle files
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    jcenter()
+  }
+}
+
+subprojects {
+  project.configurations.all {
+    resolutionStrategy.eachDependency { details ->
+      if (details.requested.group == 'androidx.fragment') {
+        details.useVersion '1.1.0-alpha02'
+      }
+      if (details.requested.group == 'io.reactivex.rxjava2' && details.requested.name=="rxjava") {
+        details.useVersion '2.1.12'
+      }
+    }
+  }
+}
+
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+task artifactZip(type: Zip) {
+  from('app/build/outputs/apk') {
+    include '*.apk'
+    include '*/*.apk'
+  }
+  from('instant/build/outputs/apk') {
+    include '*.apk'
+    include '*/*.apk'
+  }
+  archiveName "artifacts_${BuildConfig.versionName}_${BuildConfig.versionCode}.zip"
+  destinationDir(file('build/outputs/zip/'))
+}

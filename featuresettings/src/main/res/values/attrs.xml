@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="SettingsItemView">
+    <attr format="reference|string" name="settingsTitle"/>
+    <attr format="reference|string" name="settingsSubTitle"/>
+    <attr format="reference" name="icon"/>
+
+  </declare-styleable>
+</resources>

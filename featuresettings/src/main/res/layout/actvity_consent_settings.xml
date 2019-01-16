@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:title="Settings"
+      />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <com.mmlotte.lottery.feature.settings.SettingsItemView
+          android:id="@+id/settingsItemViewCrashLog"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="?attr/selectableItemBackground"
+          app:icon="@drawable/ic_crash_settings"
+          app:layout_constraintEnd_toStartOf="@+id/switchCrashLog"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:settingsSubTitle="@string/subtitle_crash_log"
+          app:settingsTitle="@string/title_crash_log"
+          />
+
+      <Switch
+          android:id="@+id/switchCrashLog"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/settingsItemViewCrashLog"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/settingsItemViewCrashLog"
+          />
+
+      <View
+          android:id="@+id/viewSeparator"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/light_grey"
+          app:layout_constraintBottom_toTopOf="@+id/settingsItemViewAd"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/settingsItemViewCrashLog"
+          />
+
+
+      <com.mmlotte.lottery.feature.settings.SettingsItemView
+          android:id="@+id/settingsItemViewAd"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="?attr/selectableItemBackground"
+          app:icon="@drawable/ic_analytics_settings"
+          app:layout_constraintEnd_toStartOf="@+id/switchAd"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/settingsItemViewCrashLog"
+          app:settingsSubTitle="@string/subtitle_ad"
+          app:settingsTitle="@string/title_ad"
+          />
+
+      <Switch
+          android:id="@+id/switchAd"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/settingsItemViewAd"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/settingsItemViewAd"
+          />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

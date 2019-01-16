@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">Feature Check</string>
+
+  <!--Use for showing the result if the lottery number is a winning number-->
+  <string name="winning_text">သင် {prize} ထီပေါက်ပါတယ်။​</string>
+
+  <!--Use for showing the result if the lottery number is NOT a winning number-->
+  <string name="lose_text">စိတ်မကောင်းပါဘူး၊ ​သင်ထီမပေါက်ပါ။ နောက်လမှာ ကံကောင်းပါစေ​</string>
+
+  <!--Shown when the lottery number length is not between 7 and 9-->
+  <string name="error_invalid_length">ထီလက်မှတ်ဂဏန်းမှာ ၆ လုံးရှိရမည်</string>
+</resources>

@@ -1,0 +1,12 @@
+image: mingc/android-build-box:latest
+pipelines:
+  branches:
+    master:
+    - step:
+        script:
+            - chmod +x gradlew
+            - ./gradlew test
+            - ./gradlew :app:assembleRelease
+            - ./gradlew artifactZip
+            - EXPORT_PATH=$(ls -lrt ./build/outputs/zip/*.zip | tail -1 | awk -F" " '{ print $9 }')
+            - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"${EXPORT_PATH}"

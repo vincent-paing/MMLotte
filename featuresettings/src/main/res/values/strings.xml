@@ -1,0 +1,18 @@
+<resources>
+  <string name="app_name">feature-about</string>
+
+  <string name="title_crash_log">Allow logging crash data</string>
+  <string name="subtitle_crash_log">We can use these crash logs to fix bugs in our future release</string>
+
+  <string name="title_ad">Allow Personalized Ads</string>
+  <string name="subtitle_ad">Allow us to use your Device Id to show personalized ads</string>
+
+  <string name="str_consent">Consent Settings</string>
+  <string name="str_privacy_policy"><![CDATA[Privacy & Policy]]></string>
+  <string name="str_version">Version : </string>
+  <string name="str_feedback">Feedback</string>
+  <string name="str_license">Third Party License</string>
+  <string name="str_developed">Developed By Aung Kyaw Paing</string>
+
+
+</resources>

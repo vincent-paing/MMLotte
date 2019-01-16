@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    app:strokeColor="@color/secondaryColor"
+    app:strokeWidth="1dp"
+    style="@style/Widget.MaterialComponents.CardView"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="8dp"
+      >
+
+    <TextView
+        android:id="@+id/tvPrize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="20sp"
+        tools:text="ကျပ်သိန်း(၁၀၀၀၀)ဆု"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWinningNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/item_winning_number"
+        />
+
+  </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,18 @@
+<resources>
+  <string name="app_name" translatable="false">Appbase</string>
+
+
+  <string name="error_generic">error တက်နေပါသည်။ ခေတ္တစောင့်ပြီး ပြန်စမ်းပေးပါ။</string>
+  <string name="error_no_internet">အင်တာနက်ကွန်ယက်ရှာမတွေ့ပါ။​ အင်တာနက်ဖွင့်ပြီး ပြန်စမ်းပေးပါ</string>
+  <string name="error_socket_timeout">အင်တာနက်ချိတ်ဆက်မှု မအောင်မြင်ပါ။</string>
+  <string name="error_server_500">ဆာဗာ error တက်နေသည်၊ ခေတ္တစောင့်ပြီး ပြန်စမ်းပေးပါ။</string>
+  <string name="error_server_404">ဆာဗာ ရှာမတွေ့ပါ။</string>
+  <string name="error_http">ဆာဗာ error တက်နေသည်၊ ခေတ္တစောင့်ပြီး ပြန်စမ်းပေးပါ။</string>
+
+  <!--Generic retry text for showing error-->
+  <string name="retry" translatable="false">Retry</string>
+
+  <!--Privacy polciy url-->
+  <string name="privacy_policy_url" translatable="false">https://mmlotte.herokuapp.com/privacy</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--Use for showing the result if the lottery number is a winning number-->
+  <string name="winning_text">သင္ {prize} ထီေပါက္ပါတယ္။​</string>
+
+  <!--Use for showing the result if the lottery number is NOT a winning number-->
+  <string name="lose_text">စိတ္မေကာင္းပါဘူး၊ ​သင္ထီမေပါက္ပါ။ ေနာက္လမွာ ကံေကာင္းပါေစ​</string>
+
+  <!--Shown when the lottery number length is not between 7 and 9-->
+  <string name="error_invalid_length">ထီလက္မွတ္ဂဏန္းမွာ ၆ လုံးရွိရမည္</string>
+</resources>

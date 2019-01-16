@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/resultListingFragment"
+      android:icon="@drawable/ic_result"
+      android:title="Result"
+      />
+
+  <item
+      android:id="@+id/checkNumberFragment"
+      android:icon="@drawable/ic_search"
+      android:title="Check"
+      />
+
+  <item
+      android:id="@+id/mainSettingsFragment"
+      android:icon="@drawable/ic_settings"
+      android:title="Settings"/>
+
+</menu>

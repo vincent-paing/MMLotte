@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/leftGuideLine"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.25"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/rightGuideLine"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.75"
+      />
+
+
+  <ProgressBar
+      android:id="@+id/progressBar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:visibility="gone"
+      app:layout_constraintEnd_toStartOf="@+id/rightGuideLine"
+      app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLottery"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCheck"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:text="Check"
+      android:textColor="@color/primaryTextColor"
+      android:visibility="visible"
+      app:layout_constraintEnd_toStartOf="@+id/rightGuideLine"
+      app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLottery"
+      app:strokeColor="@color/primaryColor"
+      style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+      />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLottery"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginRight="32dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="8dp"
+      android:hint="Lottery Number"
+      app:counterEnabled="true"
+      app:counterMaxLength="6"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/spinnerCharacter"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextLotteryNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="number"
+        android:textColor="@color/primaryTextColor"
+        />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/tvResult"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginRight="32dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="24sp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toTopOf="@+id/textInputLottery"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvDate"
+      app:layout_constraintVertical_bias="0.3"
+      tools:text="Congratz lmao"
+      />
+
+  <TextView
+      android:id="@+id/tvDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="sans-serif-condensed"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="DECEMBER 2018"
+      />
+  <Spinner
+      android:id="@+id/spinnerCharacter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:spinnerMode="dialog"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

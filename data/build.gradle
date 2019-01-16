@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  api project(':domain')
+
+  api ThreeTenBp.no_tz_db
+  implementation Kotlin.stdblib_jdk
+}
+
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

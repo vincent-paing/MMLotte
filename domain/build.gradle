@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  testImplementation CommonLibs.junit
+  testImplementation Mockito.core
+  testImplementation Mockito.inline
+  testImplementation Mockito.kotlin
+
+  api Kotlin.stdblib_jdk
+  api CommonLibs.javaxInject
+  api CommonLibs.rabbkt
+
+  api ReactiveX.rxjava
+  api ReactiveX.rxKotlin
+  api ThreeTenBp.no_tz_db
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

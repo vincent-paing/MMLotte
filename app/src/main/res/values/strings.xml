@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name" translatable="false">MMLotte</string>
+
+  <string name="channel_new_result" translatable="false">new_result</string>
+  <string name="channel_new_result_title" translatable="false">New Lottery Result</string>
+  <string name="channel_new_result_description" translatable="false">Alert when new lottery result is out</string>
+</resources>

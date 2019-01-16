@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/resultListingFragment">
+
+  <fragment
+      android:id="@+id/resultListingFragment"
+      android:name="com.mmlotte.lottery.feature.listing.view.ResultListingFragment"
+      android:label="Prize Results"/>
+
+  <fragment
+      android:id="@+id/checkNumberFragment"
+      android:name="com.mmlotte.lottery.feature.check.view.CheckNumberFragment"
+      android:label="CheckNumberFragment"/>
+  <fragment
+      android:id="@+id/mainSettingsFragment"
+      android:name="com.mmlotte.lottery.feature.settings.main.MainSettingsFragment"
+      android:label="MainSettingsFragment"/>
+
+</navigation>

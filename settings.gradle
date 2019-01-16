@@ -1,0 +1,1 @@
+include ':app', ':domain', ':data', ':network', ':appbase', ':featurelisting', ':featurecheck', ':recycledspinneradapter', ':consentdialog', ':cache', ':featuresettings'

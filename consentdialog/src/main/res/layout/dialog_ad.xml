@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:drawablePadding="8dp"
+      android:gravity="center"
+      android:text="@string/consent_ad_title"
+      android:textAppearance="@style/TextViewSubTitleWhite"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="8dp"
+      android:drawablePadding="8dp"
+      android:gravity="center"
+      android:text="@string/consent_ad_description"
+      android:textAppearance="@style/TextViewBodyPrimaryWhite"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnYes"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/txt_ad_personalized"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnNo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/txt_ad_non_personalized"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="8dp"
+      android:drawablePadding="8dp"
+      android:gravity="center"
+      android:text="@string/consent_ad_notice"
+      android:textAppearance="@style/TextViewBodySecondaryWhite"
+      />
+
+  <TextView
+      android:id="@+id/tvPrivacyPolicy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:background="?attr/selectableItemBackground"
+      android:drawablePadding="8dp"
+      android:gravity="center"
+      android:text="@string/text_privcay_policy"
+      android:textAppearance="@style/TextViewBodySecondaryWhite"
+      android:textColor="@color/link"
+      />
+
+</LinearLayout>

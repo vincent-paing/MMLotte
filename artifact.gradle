@@ -1,0 +1,10 @@
+android.applicationVariants.all { variant ->
+  def appName = "MMLotte"
+  variant.outputs.all {
+    def newName
+
+    newName =
+        "${appName}_${variant.versionName}_${variant.versionCode}_${variant.buildType.name}.apk"
+    outputFileName = newName
+  }
+}

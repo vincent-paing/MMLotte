@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion BuildConfig.compileSdk
+
+
+  defaultConfig {
+    minSdkVersion BuildConfig.minSdk
+    targetSdkVersion BuildConfig.targetSdk
+    versionName BuildConfig.versionName
+    versionCode BuildConfig.versionCode
+    resConfigs "en", "zg"
+    multiDexEnabled true
+  }
+
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+
+
+  buildTypes {
+    debug {
+      resValue 'string', 'bottom_banner_ad_id', 'ca-app-pub-3940256099942544/6300978111'
+    }
+    release {
+      minifyEnabled true
+      debuggable false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      resValue 'string', 'bottom_banner_ad_id', 'ca-app-pub-3940256099942544/6300978111'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation project(':appbase')
+
+
+  //AndroidX
+  implementation Material.material
+  implementation AndroidXCardView.card_view
+  implementation AndroidXConstraintLayout.constraint_layout
+  implementation AndroidXFragment.fragment
+
+  //Dagger
+  kapt Dagger.compiler
+  kapt Dagger.android_processor
+
+  kapt 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
+  annotationProcessor 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
+
+  //Ad
+  implementation GoogleService.ads
+
+  //Test
+  testImplementation AndroidXFragment.fragment_testing
+
+  testImplementation CommonLibs.junit
+  testImplementation AndroidArchCore.test
+  testImplementation Mockito.core
+  testImplementation Mockito.inline
+  testImplementation Mockito.kotlin
+  testImplementation ThreeTenBp.core
+  testImplementation AndroidXTest.roboelectric
+  testImplementation AndroidXTestExt.junit
+  testImplementation AndroidXTestExt.junit_ktx
+  testImplementation AndroidXTestExt.truth
+  testImplementation AndroidXEspresso.core
+  testImplementation AndroidXTest.rules
+  testImplementation AndroidXTest.runner
+
+  kaptAndroidTest Dagger.compiler
+  androidTestImplementation Mockito.core
+  androidTestImplementation Mockito.inline
+  androidTestImplementation Mockito.kotlin
+  androidTestImplementation AndroidXTest.rules
+  androidTestImplementation AndroidXTest.runner
+  androidTestImplementation AndroidXEspresso.core
+  androidTestImplementation AndroidXEspresso.contrib
+  androidTestImplementation AndroidXEspresso.intents
+  androidTestImplementation AndroidXEspresso.idling_concurrent
+  androidTestImplementation AndroidXEspresso.idling_resource
+  androidTestImplementation FragmentTestRule.android
+  androidTestImplementation AndroidArchCore.test
+  androidTestImplementation AndroidXEspresso.rx_idler
+}

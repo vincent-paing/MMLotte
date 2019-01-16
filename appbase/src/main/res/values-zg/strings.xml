@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="error_generic">error တက္ေနပါသည္။ ေခတၱေစာင့္ၿပီး ျပန္စမ္းေပးပါ။</string>
+  <string name="error_no_internet">အင္တာနက္ကြန္ယက္ရွာမေတြ႕ပါ။​ အင္တာနက္ဖြင့္ၿပီး ျပန္စမ္းေပးပါ</string>
+  <string name="error_socket_timeout">အင္တာနက္ခ်ိတ္ဆက္မႈ မေအာင္ျမင္ပါ။</string>
+  <string name="error_server_500">ဆာဗာ error တက္ေနသည္၊ ေခတၱေစာင့္ၿပီး ျပန္စမ္းေပးပါ။</string>
+  <string name="error_server_404">ဆာဗာ ရွာမေတြ႕ပါ။</string>
+  <string name="error_http">ဆာဗာ error တက္ေနသည္၊ ေခတၱေစာင့္ၿပီး ျပန္စမ္းေပးပါ။</string>
+
+</resources>
